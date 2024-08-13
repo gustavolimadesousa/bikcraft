@@ -1,0 +1,74 @@
+.header-bg {
+  background-color: #000000; /* Da um fundo ao header. */
+}
+
+.header {
+  display: flex; /* Faz com que os elementos fiquem flexiveis um do lado do outro. */
+  flex-wrap: wrap; /* Faz com que os elementos quebrem quando o viewport ficar com um width reduzido. Evita criar uma barra de rolagem na horizontal. */
+  justify-content: space-between; /* Cria um espaço entre os elementos. */
+  align-items: center; /* Alinha os elementos um ao outro no centro. */
+  box-sizing: border-box; /* Essa propriedade faz com que a soma do max-width inclua o padding. */
+  padding: 20px; /* Cria um padding que envolve todos os elementos do header. */
+  max-width: 1200px; /* Cria um limite para o conteudo do header. */
+  margin: 0 auto; /* Faz com que quando o conteudo chegar ao limite estabelecido na propriedade anterior ele crie um espaço automatico e idêntico de um lado e do outro. */
+  gap: 20px; /* Cria um gap entre os elementos do header. Função especialmente usada pra quando estiver com o viewport reduzido e para os botões e a logo nao grudarem. */
+}
+
+.header-menu {
+  display: flex; /* Faz com que os links-botões fiquem um do lado do outro. */
+  flex-wrap: wrap; /* Faz com que os elementos quebrem quando o viewport ficar com um width reduzido. Evita criar uma barra de rolagem na horizontal. */
+  gap: 40px; /* Cria um espaço entre os link-botões. */
+}
+
+.header-menu a {
+  color: #ffffff; /* Seleciona a cor branca com cor do texto dos links-botões. */
+  display: inline-block; /* Display inline-block para que ele repeite o padding e não fique um padding por cima do outro. */
+  padding: 16px 0px; /* Define um padding para cima e para baixo. */
+  font-size: 1.125rem; /* Define o tamanho da fonte. */
+  position: relative; /* Posição estabelecida como relative por cause do pseudo-elemento que necessita de um ponto de referência. */
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+.header-menu a:after {
+  content: ""; /* Ao criam um pseudo-elemento é sempre necessário criar um content mesmo que fique vazio. */
+  display: block; /* Se não definir como display block ele não é mostrado na tela. */
+  height: 2px; /* Define a altura do pseudo-elemento. */
+  width: 0px; /* Neste caso o width é zero porque tem uma transição quando hover e neste caso este é o início. */
+  background: #ffffff; /* Define a cor do pseudo-elemento. */
+  margin-top: 4px; /* Cria um espaço entre o link e o pseudo element. */
+  transition: 0.3s; /* Cria a transição de 0.3s do width 0px ao width 100%. */
+  position: absolute; /* Tira o pseudo element do fluxo do contéudo. */
+}
+
+.header-menu a:hover:after {
+  width: 100%; /* Estabelece o tamanho do width quando o usuário passar o mouse em cima. */
+}
+
+@media (max-width: 800px) {
+  .header-menu {
+    gap: 20px; /* Diminue o tamanho do gap em uma tela menor. */
+  }
+  .header-menu a {
+    background: #111111; /* Cria uma cor para o padding para parecer um botão. */
+    padding: 12px 16px; /* Diminue o padding dos links-botões. */
+    border-radius: 4px; /* Cria um arredondamento para o botão. */
+  }
+  .header-menu a:hover {
+    background-color: #2e2e2e; /* Quando hover o botão fica com uma cor mais clara. */
+  }
+  .header-menu a::after {
+    display: none; /* Tira o pseudo-elemento que já não é mais necessario em uma tela pequena. */
+  }
+}
+
+@media (max-width: 600px) {
+  .header-menu {
+    gap: 12px;
+    /* Diminue o gap em tela pequena. */
+  }
+  .header-menu a {
+    padding: 8px 12px; /* Diminue o padding dos links-botões. */
+    font-size: 14px; /* Diminue a fonte dos links-botões. */
+  }
+}

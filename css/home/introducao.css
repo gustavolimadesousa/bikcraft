@@ -1,0 +1,86 @@
+.introducao-bg {
+  background: #000000;
+  color: #ffffff;
+  box-shadow: inset 0 -120px #ffffff; /* Cria uma sombra interna que cria uma ilusão que a imagem está vazando. */
+}
+
+.introducao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px; /* Gap de 40px lado esquerdo e direito. */
+  max-width: 1200px; /* Define o tamanho do container do conteudo. */
+  box-sizing: border-box; /* Faz com que os paddings se unam. */
+  padding: 0 20px; /* Define um padding para a esquerda e direita. */
+  margin: 0 auto; /* Define uma margin automática para centralizar o container no meio do viewport.  */
+}
+
+.introducao-conteudo {
+  align-self: end; /* Alinha o conteûdo ao bottom.  */
+  padding-bottom: 200px; /* Descola do bottom. Inicialmente 80px mas foi adicionado 120px pra compensar o  box-shadow que fez uma sombra interna*/
+}
+
+.introducao h1 {
+  margin-bottom: 32px; /* Foi decidido que sempre quando ao colocar margem colocar no bottom pra depois ficar mais facil pra ajustar. */
+  font-size: 64px;
+  line-height: 1.125;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+
+.introducao span {
+  color: #ffbb00; /* Faz com que o ponto fique com uma cor específica. */
+}
+
+.introducao p {
+  margin-bottom: 20px; /* Foi decidido que sempre quando ao colocar margem colocar no bottom pra depois ficar mais facil pra ajustar. */
+  font-size: 64px;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #b2b2b2;
+  font-family: "Roboto";
+    font-weight: 400;
+}
+
+.introducao img {
+  height: 100%;
+  /* Mantem a imagem sempre na mesma altura. */
+  object-fit: cover;
+  /* Faz com que corte a imagem internamente ao invés de distorcer para ajustar ao tamanho definido.*/
+  border-radius: 4px;
+}
+
+@media (max-width: 1200px) {
+  .introducao h1 {
+    font-size: 48px; /* Diminue o tamanho da fonte. */
+  }
+
+  .introducao p {
+    font-size: 18px; /* Diminue o tamanho da fonte. */
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao-bg {
+    background: #111111; /* Muda a cor do background para criar um contraste entre a introdução e o menu. */
+    padding-top: 40px; /* Adiciona um padding porque o conteúdo estava muito grudado. */
+    box-shadow: inset 0 -60px #ffffff; /* Diminue o valor da sombra interna. */
+  }
+
+  .introducao {
+    grid-template-columns: 1fr; /* Coloca o conteúdo em uma só coluna. */
+    gap: 32px; /* Diminue o gap. */
+  }
+
+  .introducao-conteudo {
+    padding-bottom: 0px; /* Retira do padding bottom adicionado. */
+  }
+  .introducao h1 {
+    font-size: 32px; /* Diminue o tamanho da fonte. */
+    margin-bottom: 16px; /* Diminue o tamanho da margin. */
+  }
+
+  .introducao img {
+    height: 300px; /* Diminue a altura da imagem. */
+    width: 100%; /* Faz a imagem crescer da esquerda para a direita.*/
+  }
+}
