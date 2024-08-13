@@ -41,10 +41,10 @@ img {
   gap: 20px; /* Cria um gap entre os elementos do header. Função especialmente usada pra quando estiver com o viewport reduzido e para os botões e a logo nao grudarem. */
 }
 
-.header img {
-  /* padding: 20px; */
-  /* Cria um padding para a imagem da logo. */
-}
+/* .header img {
+  padding: 20px;
+  Cria um padding para a imagem da logo. 
+} */
 
 .header-menu {
   display: flex; /* Faz com que os links-botões fiquem um do lado do outro. */
@@ -58,6 +58,8 @@ img {
   padding: 16px 0px; /* Define um padding para cima e para baixo. */
   font-size: 1.125rem; /* Define o tamanho da fonte. */
   position: relative; /* Posição estabelecida como relative por cause do pseudo-elemento que necessita de um ponto de referência. */
+  font-family: "Poppins";
+  font-weight: 400;
 }
 
 .header-menu a:after {
@@ -107,6 +109,7 @@ img {
   .header-menu a {
     padding: 8px 12px; /* Diminue o padding dos links-botões. */
     font-size: 14px; /* Diminue a fonte dos links-botões. */
+    font-family: "Poppins";
   }
 }
 
@@ -135,6 +138,8 @@ img {
   margin-bottom: 32px; /* Foi decidido que sempre quando ao colocar margem colocar no bottom pra depois ficar mais facil pra ajustar. */
   font-size: 64px;
   line-height: 1.125;
+  font-family: "Poppins";
+  font-weight: 600;
 }
 
 .introducao span {
@@ -147,35 +152,44 @@ img {
   font-size: 24px;
   line-height: 1.5;
   color: #b2b2b2;
+  font-family: "Roboto";
+    font-weight: 400;
 }
 
 .introducao a {
   display: inline-block; /* Display inline-block faz com que o link adere aos padding corretamente. */
   padding: 16px 32px;
-  background: linear-gradient(#ffbf00, #f2a50c); /* Esse é um método para aplicar um gradiente ao botão. */
+  background: linear-gradient(
+    #ffbf00,
+    #f2a50c
+  ); /* Esse é um método para aplicar um gradiente ao botão. */
   border-radius: 4px;
-  box-shadow: 0 1px 2px rgba(0,0,0,.1); /* Aplica uma sombra ao botão. */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Aplica uma sombra ao botão. */
   text-transform: uppercase; /* Tranforma o texto em maiúsculo. */
   color: #332200;
   font-size: 18px;
   line-height: 1.33;
-  font-weight: bold; /* Define a peso da fonte como negrito. */
+  font-family: "Poppins";
+  font-weight: 600;
 }
 
 .introducao a:hover {
-  background: linear-gradient(#ffb60d, #e59317); /* Esse é um método para aplicar um gradiente ao botão mais escuro quando houver um hover. */
+  background: linear-gradient(
+    #ffb60d,
+    #e59317
+  ); /* Esse é um método para aplicar um gradiente ao botão mais escuro quando houver um hover. */
 }
- 
-@media (max-width:600px){
-.introducao a { 
-  /* Diminue o tamanho do botão. */
-  padding: 12px 18px;
-  font-size: 16px;
-}
+
+@media (max-width: 600px) {
+  .introducao a {
+    /* Diminue o tamanho do botão. */
+    padding: 12px 18px;
+    font-size: 16px;
+  }
 }
 
 .introducao img {
-  height: 100%; 
+  height: 100%;
   /* Mantem a imagem sempre na mesma altura. */
   object-fit: cover;
   /* Faz com que corte a imagem internamente ao invés de distorcer para ajustar ao tamanho definido.*/
@@ -193,13 +207,13 @@ img {
 }
 
 @media (max-width: 800px) {
-.introducao-bg {
-  background: #111111; /* Muda a cor do background para criar um contraste entre a introdução e o menu. */
-  padding-top: 40px; /* Adiciona um padding porque o conteúdo estava muito grudado. */
-  box-shadow: inset 0 -60px #ffffff; /* Diminue o valor da sombra interna. */
-}
+  .introducao-bg {
+    background: #111111; /* Muda a cor do background para criar um contraste entre a introdução e o menu. */
+    padding-top: 40px; /* Adiciona um padding porque o conteúdo estava muito grudado. */
+    box-shadow: inset 0 -60px #ffffff; /* Diminue o valor da sombra interna. */
+  }
 
-  .introducao{
+  .introducao {
     grid-template-columns: 1fr; /* Coloca o conteúdo em uma só coluna. */
     gap: 32px; /* Diminue o gap. */
   }
