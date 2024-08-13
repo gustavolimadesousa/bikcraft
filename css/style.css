@@ -2,6 +2,7 @@ body {
   margin: 0px; /* Tira a margem do body. */
   padding: 0px; /* Tira o padding do body. */
   font-family: Arial, Helvetica, sans-serif; /* Estabelece uma fonte para todo o body. */
+  padding-bottom: 600px;
 }
 
 h1,
@@ -112,6 +113,7 @@ img {
 .introducao-bg {
   background: #000000;
   color: #ffffff;
+  box-shadow: inset 0 -120px #ffffff; /* Cria uma sombra interna que cria uma ilusão que a imagem está vazando. */
 }
 
 .introducao {
@@ -126,7 +128,7 @@ img {
 
 .introducao-conteudo {
   align-self: end; /* Alinha o conteûdo ao bottom.  */
-  padding-bottom: 80px; /* Descola do bottom. */
+  padding-bottom: 200px; /* Descola do bottom. Inicialmente 80px mas foi adicionado 120px pra compensar o  box-shadow que fez uma sombra interna*/
 }
 
 .introducao h1 {
@@ -161,5 +163,57 @@ img {
 }
 
 .introducao a:hover {
-  background: linear-gradient(#ffb60d, #e59317); /* Esse é um método para aplicar um gradiente ao botão mais escuro quando ouver um hover. */
+  background: linear-gradient(#ffb60d, #e59317); /* Esse é um método para aplicar um gradiente ao botão mais escuro quando houver um hover. */
+}
+ 
+@media (max-width:600px){
+.introducao a { 
+  /* Diminue o tamanho do botão. */
+  padding: 12px 18px;
+  font-size: 16px;
+}
+}
+
+.introducao img {
+  height: 100%; 
+  /* Mantem a imagem sempre na mesma altura. */
+  object-fit: cover;
+  /* Faz com que corte a imagem internamente ao invés de distorcer para ajustar ao tamanho definido.*/
+  border-radius: 4px;
+}
+
+@media (max-width: 1200px) {
+  .introducao h1 {
+    font-size: 48px; /* Diminue o tamanho da fonte. */
+  }
+
+  .introducao p {
+    font-size: 18px; /* Diminue o tamanho da fonte. */
+  }
+}
+
+@media (max-width: 800px) {
+.introducao-bg {
+  background: #111111; /* Muda a cor do background para criar um contraste entre a introdução e o menu. */
+  padding-top: 40px; /* Adiciona um padding porque o conteúdo estava muito grudado. */
+  box-shadow: inset 0 -60px #ffffff; /* Diminue o valor da sombra interna. */
+}
+
+  .introducao{
+    grid-template-columns: 1fr; /* Coloca o conteúdo em uma só coluna. */
+    gap: 32px; /* Diminue o gap. */
+  }
+
+  .introducao-conteudo {
+    padding-bottom: 0px; /* Retira do padding bottom adicionado. */
+  }
+  .introducao h1 {
+    font-size: 32px; /* Diminue o tamanho da fonte. */
+    margin-bottom: 16px; /* Diminue o tamanho da margin. */
+  }
+
+  .introducao img {
+    height: 300px; /* Diminue a altura da imagem. */
+    width: 100%; /* Faz a imagem crescer da esquerda para a direita.*/
+  }
 }
