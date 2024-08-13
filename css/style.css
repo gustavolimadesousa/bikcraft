@@ -4,14 +4,24 @@ body {
   font-family: Arial, Helvetica, sans-serif; /* Estabelece uma fonte para todo o body. */
 }
 
+h1,
+ul,
+p {
+  margin: 0px; /* Tira a margem. */
+}
+
 ul {
-  margin: 0px; /* Tira a margem da ul. */
   padding: 0px; /* Tira o padding da ul. */
   list-style: none; /* Tira o estilo de lista 'bolinha preta'. */
 }
 
 a {
   text-decoration: none; /* Tira o sublinhado base dos links. */
+  color: inherit; /* Faz com que os links comecem a herdar a cor do elemento pai. */
+}
+
+img {
+  max-width: 100%; /* Faz com que a imagem cresça somente do tamanho do container. */
 }
 
 .header-bg {
@@ -31,7 +41,8 @@ a {
 }
 
 .header img {
-  padding: 20px; /* Cria um padding para a imagem da logo. */
+  /* padding: 20px; */
+  /* Cria um padding para a imagem da logo. */
 }
 
 .header-menu {
@@ -96,4 +107,59 @@ a {
     padding: 8px 12px; /* Diminue o padding dos links-botões. */
     font-size: 14px; /* Diminue a fonte dos links-botões. */
   }
+}
+
+.introducao-bg {
+  background: #000000;
+  color: #ffffff;
+}
+
+.introducao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 40px; /* Gap de 40px lado esquerdo e direito. */
+  max-width: 1200px; /* Define o tamanho do container do conteudo. */
+  box-sizing: border-box; /* Faz com que os paddings se unam. */
+  padding: 0 20px; /* Define um padding para a esquerda e direita. */
+  margin: 0 auto; /* Define uma margin automática para centralizar o container no meio do viewport.  */
+}
+
+.introducao-conteudo {
+  align-self: end; /* Alinha o conteûdo ao bottom.  */
+  padding-bottom: 80px; /* Descola do bottom. */
+}
+
+.introducao h1 {
+  margin-bottom: 32px; /* Foi decidido que sempre quando ao colocar margem colocar no bottom pra depois ficar mais facil pra ajustar. */
+  font-size: 64px;
+  line-height: 1.125;
+}
+
+.introducao span {
+  color: #ffbb00; /* Faz com que o ponto fique com uma cor específica. */
+}
+
+.introducao p {
+  margin-bottom: 20px; /* Foi decidido que sempre quando ao colocar margem colocar no bottom pra depois ficar mais facil pra ajustar. */
+  font-size: 64px;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #b2b2b2;
+}
+
+.introducao a {
+  display: inline-block; /* Display inline-block faz com que o link adere aos padding corretamente. */
+  padding: 16px 32px;
+  background: linear-gradient(#ffbf00, #f2a50c); /* Esse é um método para aplicar um gradiente ao botão. */
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1); /* Aplica uma sombra ao botão. */
+  text-transform: uppercase; /* Tranforma o texto em maiúsculo. */
+  color: #332200;
+  font-size: 18px;
+  line-height: 1.33;
+  font-weight: bold; /* Define a peso da fonte como negrito. */
+}
+
+.introducao a:hover {
+  background: linear-gradient(#ffb60d, #e59317); /* Esse é um método para aplicar um gradiente ao botão mais escuro quando ouver um hover. */
 }
