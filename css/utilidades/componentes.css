@@ -1,3 +1,12 @@
+.container {
+  box-sizing: border-box; /* Faz com que as margens não se unem. */
+  max-width: 1200px; /* Cria um limite para o container do titulo igual da introdução. */
+  padding-left: 20px; /* Padding de 20px estabelecido para todo o site. */
+  padding-right: 20px; /* Padding de 20px estabelecido para todo o site. */
+  margin-left: auto; /* Margin necessária para centralizar o container */
+  margin-right: auto; /* Margin necessária para centralizar o container */
+}
+
 .botao {
   display: inline-block; /* Display inline-block faz com que o link adere aos padding corretamente. */
   padding: 16px 32px;
@@ -9,10 +18,7 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Aplica uma sombra ao botão. */
   text-transform: uppercase; /* Tranforma o texto em maiúsculo. */
   color: var(--cor-p5);
-  font-size: 18px;
-  line-height: 1.33;
-  font-family: "Poppins";
-  font-weight: 600;
+  font: 600 1rem/1.5 "Poppins", sans-serif; /* Modo encurtado para escrever as propriedades da fonte (weight/size/line-height/family)*/
 }
 
 .botao:hover {
@@ -26,6 +32,6 @@
   .botao {
     /* Diminue o tamanho do botão. */
     padding: 12px 18px;
-    font-size: 16px;
+    font-size: 1rem;
   }
 }

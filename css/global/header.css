@@ -7,10 +7,7 @@
   flex-wrap: wrap; /* Faz com que os elementos quebrem quando o viewport ficar com um width reduzido. Evita criar uma barra de rolagem na horizontal. */
   justify-content: space-between; /* Cria um espaço entre os elementos. */
   align-items: center; /* Alinha os elementos um ao outro no centro. */
-  box-sizing: border-box; /* Essa propriedade faz com que a soma do max-width inclua o padding. */
   padding: 20px; /* Cria um padding que envolve todos os elementos do header. */
-  max-width: 1200px; /* Cria um limite para o conteudo do header. */
-  margin: 0 auto; /* Faz com que quando o conteudo chegar ao limite estabelecido na propriedade anterior ele crie um espaço automatico e idêntico de um lado e do outro. */
   gap: 20px; /* Cria um gap entre os elementos do header. Função especialmente usada pra quando estiver com o viewport reduzido e para os botões e a logo nao grudarem. */
 }
 
@@ -23,10 +20,8 @@
 .header-menu a {
   display: inline-block; /* Display inline-block para que ele repeite o padding e não fique um padding por cima do outro. */
   padding: 16px 0px; /* Define um padding para cima e para baixo. */
-  font-size: 1.125rem; /* Define o tamanho da fonte. */
   position: relative; /* Posição estabelecida como relative por cause do pseudo-elemento que necessita de um ponto de referência. */
-  font-family: "Poppins";
-  font-weight: 400;
+
 }
 
 .header-menu a:after {

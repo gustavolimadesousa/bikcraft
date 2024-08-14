@@ -1,0 +1,67 @@
+.bicicleta-lista {
+  /* Cria os paddings do container. */
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.bicicleta-lista h2 {
+  margin-bottom: 40px; /* Cria um espaço entre os elementos. */
+
+}
+
+.bicicleta-lista ul {
+  display: flex; /* Coloca os itens um ao lado do outro. */
+  gap: 40px; /* Cria um espaço entre os itens. */
+  padding: 0 20px 20px 20px; /* Padding de 20px estabelecido para todo o site. */
+  max-width: 1400px; /* Cria um limite para o container das imagens maior que o da introdução. */
+  margin-left: auto; /* Margin necessária para centralizar o container */
+  margin-right: auto; /* Margin necessária para centralizar o container */
+  overflow-x: auto; /* Faz com que a barra de scroll apareça somente no conteudo determinado no eixo x e não na pagina inteira.  */
+}
+
+.bicicleta-lista li {
+  min-width: 280px; /* Faz com que o item li não diminua menos que 280px. */
+}
+
+.bicicleta-lista a {
+  display: block; /* Faz com que a seleção do link fique em bloco. */
+}
+
+.bicicleta-lista img {
+  margin-bottom: 16px;
+}
+
+.bicicleta-lista h3 {
+  margin-bottom: 8px;
+  display: flex; /* Faz com que os elementos fiquem paralelos uns ao outros pra poder usar a propriedade do align-itens.  */
+  align-items: center; /* Alinhar os itens no centro.  */
+}
+
+.bicicleta-lista h3::before {
+  content: "";
+  display: inline-block; /* Faz com que pegue o height mas fica na mesma linha. */
+  height: 8px;
+  width: 12px; /* Largura do pseudo elemento. */
+  background: var(--cor-p1);
+  margin-right: 8px;
+  transition: width .2s;
+}
+
+.bicicleta-lista a:hover h3::before {
+width: 24px;
+}
+
+.bicicleta-lista li span {
+  padding-left: 20px; /* Soma da width do pseudo elemento mais a margin-right. Isso faz a span alinhar com o h3. */
+}
+
+@media (max-width: 800px) {
+  .bicicleta-lista {
+    /* Atualiza os paddings do container. */
+    padding-bottom: 60px;
+  }
+
+  .bicicleta-lista ul {
+    gap: 20px;
+  }
+}
