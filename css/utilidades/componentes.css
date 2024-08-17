@@ -19,6 +19,7 @@
   text-transform: uppercase; /* Tranforma o texto em maiúsculo. */
   color: var(--cor-p5);
   font: 600 1rem/1.5 "Poppins", sans-serif; /* Modo encurtado para escrever as propriedades da fonte (weight/size/line-height/family)*/
+  max-width: max-content; /* Faz com que o botão não cresça mais do que o tamanho do conteúdo. */
 }
 
 .botao:hover {
@@ -26,6 +27,15 @@
     #ffb60d,
     #e59317
   ); /* Esse é um método para aplicar um gradiente ao botão mais escuro quando houver um hover. */
+}
+
+.botao.secundario {
+  background: var(--cor-10);
+  color: var(--cor-2);
+}
+
+.botao.secundario:hover {
+  background: var(--cor-9);
 }
 
 @media (max-width: 600px) {
