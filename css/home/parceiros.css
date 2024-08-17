@@ -1,0 +1,56 @@
+.parceiros {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
+.parceiros h2 {
+  margin-bottom: 60px;
+}
+
+.parceiros ul {
+  max-width: 1400px;  /* Faz o container vazar da medida de 1200px pra dar contraste. */
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid; /* Neste caso usa-se grid ao invés de flex porque quero que as colunas fiquem sempre alinhadas. */
+  grid-template-columns: repeat(4, 1fr); /* Estabelece o tamanho as colunas do grid. */
+}
+
+.parceiros li {
+  display: flex;
+  padding: 32px;
+  border-left: 2px solid var(--cor-2); /* Cria a borda */
+}
+
+.parceiros img {
+ margin: auto; /* Margin auto faz com que a imagem fique centralizada. Porém o li tem que ser display flex; */
+}
+
+.parceiros li:first-child,
+.parceiros li:nth-child(5){
+  border-left: none; /* Tira a border left do primeiro e terceiro elemento. */
+}
+
+.parceiros li:nth-child(n + 5){
+  border-top: 2px solid var(--cor-2); /* Cria a borda em todos os elementos acima do quinto*/
+}
+
+@media (max-width: 800px){
+  .parceiros {
+    padding-bottom: 60px;
+  }
+
+  .parceiros h2 {
+    margin-bottom: 20px;
+  }
+
+  .parceiros ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .parceiros li:nth-child(n + 3) {
+    border-top: 2px solid var(--cor-2);
+  }
+  .parceiros li:nth-child(odd){
+    border-left: none;
+  }
+}
