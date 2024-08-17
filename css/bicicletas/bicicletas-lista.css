@@ -33,7 +33,8 @@
 
 .bicicleta-lista h3 {
   margin-bottom: 8px;
-  display: flex; /* Faz com que os elementos fiquem paralelos uns ao outros pra poder usar a propriedade do align-itens.  */
+  display: flex; 
+  /* Faz com que os elementos fiquem paralelos uns ao outros pra poder usar a propriedade do align-itens.  */
   align-items: center; /* Alinhar os itens no centro.  */
 }
 

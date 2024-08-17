@@ -23,6 +23,7 @@
 }
 
 .introducao img {
+  width: 100%;
   height: 100%;
   /* Mantem a imagem sempre na mesma altura. */
   object-fit: cover;

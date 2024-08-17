@@ -1,0 +1,87 @@
+.tecnologia-bg {
+  background-color: var(--cor-11);
+  box-shadow: inset 0px 80px var(--cor-0), inset 0px -80px var(--cor-0) ;
+}
+
+.tecnologia {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.tecnologia-imagem img {
+  width: 100%; /* Tem que definir o width porque em alguns navegadores como o safari quando o height esta em 100% e o width não foi definido ele não respeita a largura e a imagem fica muito grande. */
+  height: 100%; /* faz com que a imagem nao diminua menos que o conteudo. */
+  object-fit: cover; /* Faz com que a imagem deixe de ser esmagada e comece a cortar. */
+  object-position: left; /* Faz com que a imagem comece a ser cortada pela esquerda. */
+}
+
+.tecnologia-conteudo {
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+
+.tecnologia-conteudo > span { 
+  /* Aplicando as propriedades na primeira span com o sinal > caso tenha que adicionar outra span ela nao pegue o estilo. */
+  display: block; /* Span é um elemento inline se não for definido como display block ela não recebe o valor da margin bottom corretamente.  */
+  margin-bottom: 20px;
+}
+
+.tecnologia-conteudo h2 {
+  margin-bottom: 20px;
+}
+
+.tecnologia-conteudo > p {
+  margin-bottom: 20px;
+}
+
+.tecnologia a {
+  margin-bottom: 80px;
+}
+
+.tecnologia-vantagens {
+  display: flex; /* Coloca o conteúdo um do lado do outro. */
+  gap: 40px;
+}
+
+.tecnologia-vantagens h3 {
+  margin-bottom: 8px;
+  width: max-content; /* Usando essa propriedade o conteúdo nunca quebra quando for reduzido. */
+}
+
+.tecnologia-vantagens img { 
+  width: 24px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+  .tecnologia-bg {
+    box-shadow: initial; /* Tira a sombra. */
+  }
+  
+  .tecnologia {
+    grid-template-columns: 1fr;
+  }
+
+  .tecnologia-conteudo {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .tecnologia-imagem {
+    display: none; /* Tira a imagem. */
+  }
+
+  .tecnologia a {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tecnologia-vantagens {
+    flex-direction: column; /* Faz com que o flex fique em direção de coluna e não como linha. */
+  }
+}
+
+
+
