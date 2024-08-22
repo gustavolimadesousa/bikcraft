@@ -1,0 +1,107 @@
+.bicicletas-bg {
+  background: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 0);
+}
+
+.bicicletas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.bicicletas-img {
+  display: grid; /* Forma de positionar elemento com grid e não com position absolute. */
+}
+
+.bicicletas-img img {
+  grid-area: 1/1; /* Define que a imagem vai ficar na posição 1/1 */
+}
+
+.bicicletas-img span {
+  grid-area: 1/1; /* Define que o preco (span) vai ficar na posição 1/1 igual a imagem */
+  place-self: start end; /* Usando place-self a imagem fica pequena e localizado no local indicado. */
+  margin-top: 20px;
+  background-color: var(--cor-12);
+  display: inline-block;
+  padding: 8px 16px 8px 8px;
+  border-radius: 4px 0 0 4px;
+}
+
+.bicicletas-conteudo {
+  display: grid; 
+  /* Cria o grid do conteudo. */
+  grid-template-columns: 1fr auto;
+ align-content: start; /* Alinha o conteudo ao inicio e faz com que ele não crie espaços para tentar acompanhar o tamanho da imagem. */
+}
+
+.bicicletas h2,
+.bicicletas p {
+  grid-column: 1/-1;
+}
+
+.bicicletas h2 {
+  margin-bottom: 20px;
+}
+
+.bicicletas h2::before {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 8px;
+  background-color: var(--cor-p1);
+  margin-bottom: 8px;
+}
+
+.bicicletas p {
+  margin-bottom: 32px;
+}
+
+.bicicletas .botao {
+  /* Alinha o botao ao fim. */
+  align-self: end;
+}
+
+.bicicletas ul {
+  /* Jeito para criar espaço entre linhas sem que a primeira linha fique com espaço ou margem pra cima. Método opicional: .bicicletas li + li {
+    margin-top: 16px; } */
+  display: grid;
+  gap: 16px;
+}
+
+.bicicletas li {
+  display: flex;
+  align-items: center;
+}
+
+.bicicletas-conteudo img {
+  /* Diminue a imagem do icone */
+  width: 24px;
+  margin-right: 8px;
+}
+
+@media (max-width: 800px) {
+  .bicicletas {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 40px;
+    padding-top: 40px;
+  }
+  .bicicletas-bg {
+    background: var(--cor-11);
+  }
+}
+
+@media (max-width: 600px) {
+  .bicicletas-conteudo {
+    grid-template-columns: 1fr;
+  }
+  .bicicletas ul {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 32px;
+    font-size: 1rem;
+  }
+  .bicicletas .botao {
+place-self: start;
+  }
+}

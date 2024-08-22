@@ -38,6 +38,26 @@
   background: var(--cor-9);
 }
 
+.botao.seta{
+  display: flex; /* Display flex pra ser possível alinhar os elementos. */
+  align-items: center;
+}
+
+.botao.seta::after{
+  /* Adicionando a seta ao botão como pseudo elemento. */
+content: '';
+display: inline-block;
+width: 18px;
+height: 10px;
+margin-left: 12px;
+background: url(../../img/icones/seta.svg);
+transition: transform 0.2s; /* Define a velocidade da transição. */
+}
+
+.botao.seta:hover::after{
+transform: translateX(4px); /* Faz com que o pseudo elemento mova 4px no eixo X. */
+}
+
 @media (max-width: 600px) {
   .botao {
     /* Diminue o tamanho do botão. */
