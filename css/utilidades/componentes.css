@@ -20,6 +20,8 @@
   color: var(--cor-p5);
   font: 600 1rem/1.5 "Poppins", sans-serif; /* Modo encurtado para escrever as propriedades da fonte (weight/size/line-height/family)*/
   max-width: max-content; /* Faz com que o botão não cresça mais do que o tamanho do conteúdo. */
+  border: none; /* Tira a borda do botão. */
+  cursor: pointer; /* Cria um cursor para o botão. */
 }
 
 .botao:hover {
