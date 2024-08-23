@@ -19,6 +19,10 @@
   overflow-x: auto; /* Faz com que a barra de scroll apareça somente no conteudo determinado no eixo x e não na pagina inteira.  */
 }
 
+#bicicleta .bicicleta-lista ul {
+  padding: 0 0 20px 0; /* Padding de 20px somente pra baixo quando estiver na pagina bicicleta */
+}
+
 .bicicleta-lista li {
   min-width: 280px; /* Faz com que o item li não diminua menos que 280px. */
 }
