@@ -15,6 +15,7 @@
 .depoimento-conteudo {
   padding: 40px 40px 80px 80px;
   align-self: end; /* como é um elemento de grid pode-se usar essa propriedade para alinhar o texto em baixo. */
+  background: url(../../img/dec/top-left-p.svg) no-repeat bottom 40px right 40px;
 }
 
 .depoimento-conteudo p {
@@ -41,6 +42,13 @@
 
 .depoimento p::after {
   content: "”";
+}
+@media (min-width: 1200px) {
+.depoimento img {
+  max-height: 520px ;
+}
+
+
 }
 
 @media (max-width: 800px) {
