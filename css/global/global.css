@@ -28,6 +28,7 @@ a {
 
 img {
   max-width: 100%; /* Faz com que a imagem cresça somente do tamanho do container. */
+  height: auto;
   display: block;
 }
 
