@@ -35,9 +35,14 @@
   position: absolute; /* Tira o pseudo element do fluxo do contéudo. */
 }
 
-.header-menu a:hover:after {
+.header-menu a:hover:after, 
+.header-menu a.ativo::after {
   width: 100%; /* Estabelece o tamanho do width quando o usuário passar o mouse em cima. */
+
+  /* classe ativo adicionado por causa do javascript do menu ativo. */
 }
+
+
 
 @media (max-width: 800px) {
   .header-menu {
