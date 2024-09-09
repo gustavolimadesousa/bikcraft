@@ -40,3 +40,7 @@
 
 /* Termos */
 @import "./termos/termos.css";
+
+
+ /* $ cleancss -o ./css/style.min.css ./css/style.css --with-rebase  */
+ /* Còdigo para criar somente arquivo do css (esquever no terminal) */
